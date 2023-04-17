@@ -60,11 +60,10 @@ function placeYourPick(event) {
         }
         event.srcElement.innerText = playerMark;
         count++;
-
+		const subHeading = document.getElementsByClassName('message');
         let won = checkForWin();
         if(won) {
             gameOn = false;            
-            const subHeading = document.getElementsByClassName('message');
             if(turn) {
                 subHeading[0].innerText = player2+" congratulations you won!";
             }
@@ -72,6 +71,13 @@ function placeYourPick(event) {
                 subHeading[0].innerText = player1+" congratulations you won!";           
             }
         }
+		else {
+			
+			if(turn) {
+				subHeading[0].innerText = player1+", you're up";
+			}
+			else subHeading[0].innerText = player2+", you're up";
+		}
         if(turn) {
             turn = 0;
         }
