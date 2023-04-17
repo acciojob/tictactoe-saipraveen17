@@ -54,9 +54,9 @@ nine.addEventListener('click', placeYourPick);
 
 function placeYourPick(event) {
     if(count!=9&&gameOn) {
-        let playerMark = 'O';
+        let playerMark = 'o';
         if(turn==0) {
-            playerMark = 'X'
+            playerMark = 'x'
         }
         event.srcElement.innerText = playerMark;
         count++;
@@ -83,53 +83,53 @@ function placeYourPick(event) {
     }
 }
 function checkForWin() {
-    if(one.innerText=='X'&&two.innerText=='X'&&three.innerText=='X') {
+    if(one.innerText=='x'&&two.innerText=='x'&&three.innerText=='x') {
         return true;
     }
-    if(one.innerText=='X'&&four.innerText=='X'&&seven.innerText=='X') {
+    if(one.innerText=='x'&&four.innerText=='x'&&seven.innerText=='x') {
         return true;
     }
-    if(four.innerText=='X'&&five.innerText=='X'&&six.innerText=='X') {
+    if(four.innerText=='x'&&five.innerText=='x'&&six.innerText=='x') {
         return true;
     }
-    if(seven.innerText=='X'&&eight.innerText=='X'&&nine.innerText=='X') {
+    if(seven.innerText=='x'&&eight.innerText=='x'&&nine.innerText=='x') {
         return true;
     }
-    if(five.innerText=='X'&&two.innerText=='X'&&eight.innerText=='X') {
+    if(five.innerText=='x'&&two.innerText=='x'&&eight.innerText=='x') {
         return true;
     }
-    if(six.innerText=='X'&&nine.innerText=='X'&&three.innerText=='X') {
+    if(six.innerText=='x'&&nine.innerText=='x'&&three.innerText=='x') {
         return true;
     }
-    if(one.innerText=='X'&&five.innerText=='X'&&nine.innerText=='X') {
+    if(one.innerText=='x'&&five.innerText=='x'&&nine.innerText=='x') {
         return true;
     }
-    if(three.innerText=='X'&&five.innerText=='X'&&seven.innerText=='X') {
+    if(three.innerText=='x'&&five.innerText=='x'&&seven.innerText=='x') {
         return true;
     }
     
-    if(one.innerText=='O'&&two.innerText=='O'&&three.innerText=='O') {
+    if(one.innerText=='o'&&two.innerText=='o'&&three.innerText=='o') {
         return true;
     }
-    if(one.innerText=='O'&&four.innerText=='O'&&seven.innerText=='O') {
+    if(one.innerText=='o'&&four.innerText=='o'&&seven.innerText=='o') {
         return true;
     }
-    if(four.innerText=='O'&&five.innerText=='O'&&six.innerText=='O') {
+    if(four.innerText=='o'&&five.innerText=='o'&&six.innerText=='o') {
         return true;
     }
-    if(seven.innerText=='O'&&eight.innerText=='O'&&nine.innerText=='O') {
+    if(seven.innerText=='o'&&eight.innerText=='o'&&nine.innerText=='o') {
         return true;
     }
-    if(five.innerText=='O'&&two.innerText=='O'&&eight.innerText=='O') {
+    if(five.innerText=='o'&&two.innerText=='o'&&eight.innerText=='o') {
         return true;
     }
-    if(six.innerText=='O'&&nine.innerText=='O'&&three.innerText=='O') {
+    if(six.innerText=='o'&&nine.innerText=='o'&&three.innerText=='o') {
         return true;
     }
-    if(one.innerText=='O'&&five.innerText=='O'&&nine.innerText=='O') {
+    if(one.innerText=='o'&&five.innerText=='o'&&nine.innerText=='o') {
         return true;
     }
-    if(three.innerText=='O'&&five.innerText=='O'&&seven.innerText=='O') {
+    if(three.innerText=='o'&&five.innerText=='o'&&seven.innerText=='o') {
         return true;
     }
     return false;
