@@ -1,4 +1,3 @@
-//your JS code here. If required.
 // Start Game events and data changes
 const button = document.querySelectorAll('div>button');
 var player1, player2;
@@ -23,7 +22,7 @@ function submitFunc() {
 }
 
 function gameStart() {
-    const subHeading = document.getElementsByClassName('sub-heading');
+    const subHeading = document.getElementsByClassName('message');
     
     subHeading[0].innerText = player1+", you're up";
 }
@@ -65,12 +64,12 @@ function placeYourPick(event) {
         let won = checkForWin();
         if(won) {
             gameOn = false;            
-            const subHeading = document.getElementsByClassName('sub-heading');
+            const subHeading = document.getElementsByClassName('message');
             if(turn) {
-                subHeading[0].innerText = "Congratulations to the winner "+player2;
+                subHeading[0].innerText = player2+" congratulations you won!";
             }
             else {
-                subHeading[0].innerText = "Congratulations to the winner "+player1;            
+                subHeading[0].innerText = player1+" congratulations you won!";           
             }
         }
         if(turn) {
@@ -79,7 +78,7 @@ function placeYourPick(event) {
         else turn++;
     }
     else {
-        const subHeading = document.getElementsByClassName('sub-heading');
+        const subHeading = document.getElementsByClassName('message');
         subHeading[0].innerText = "Game Completed, click on restart for a new game";        
     }
 }
